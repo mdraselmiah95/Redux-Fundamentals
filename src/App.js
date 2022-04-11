@@ -1,9 +1,10 @@
 import "./App.css";
+import UseReducer from "./components/useReducer/UseReducer";
 
 function App() {
   return (
     <div>
-      <h2>This is Redux</h2>
+      <UseReducer />
     </div>
   );
 }
