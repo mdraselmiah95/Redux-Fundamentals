@@ -11,6 +11,14 @@ export const portalReducer = (state, action) => {
         patients: newPatients,
       };
       break;
+    case "REMOVE_PATIENT":
+      const removed = state.patients.filter(
+        (patient) => patient.id !== action.id
+      );
+      return {
+        ...state,
+        patients: removed,
+      };
 
     default:
       return state;

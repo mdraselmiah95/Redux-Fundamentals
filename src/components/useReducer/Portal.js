@@ -16,7 +16,9 @@ const Portal = () => {
       <br />
       <h3>Added Patients:</h3>
       {state.patients.map((patient) => (
-        <p key={patient.id}>{patient.name}</p>
+        <p key={patient.id}>
+          {patient.name} <button>X</button>
+        </p>
       ))}
     </div>
   );
