@@ -17,7 +17,12 @@ const Portal = () => {
       <h3>Added Patients:</h3>
       {state.patients.map((patient) => (
         <p key={patient.id}>
-          {patient.name} <button>X</button>
+          {patient.name}{" "}
+          <button
+            onClick={() => dispatch({ type: "REMOVE_PATIENT", id: patient.id })}
+          >
+            X
+          </button>
         </p>
       ))}
     </div>
