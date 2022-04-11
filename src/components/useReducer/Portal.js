@@ -10,7 +10,9 @@ const Portal = () => {
       <h1>This is Portal.</h1>
       <h3>Has Patients:{state.patients.length}</h3>
       <input type="text" onChange={(e) => setName(e.target.value)} />
-      <button>Add</button>
+      <button onClick={() => dispatch({ type: "ADD_PATIENT", name })}>
+        Add
+      </button>
     </div>
   );
 };
