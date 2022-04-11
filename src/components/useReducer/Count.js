@@ -26,7 +26,7 @@ const Count = () => {
   return (
     <div>
       <h1>{state.count}</h1>
-      <button>Increase</button>
+      <button onClick={() => dispatch({ type: "INCREMENT" })}>Increase</button>
       <button>Decrease</button>
     </div>
   );

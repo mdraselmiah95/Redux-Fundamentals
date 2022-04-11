@@ -3,7 +3,13 @@ import Count from "./Count";
 
 const UseReducer = () => {
   return (
-    <div style={{ margin: "auto", display: "flex", alignItems: "center" }}>
+    <div
+      style={{
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+      }}
+    >
       <Count />
     </div>
   );
