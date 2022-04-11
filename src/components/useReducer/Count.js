@@ -14,6 +14,11 @@ const countReducer = (state, action) => {
         count: state.count + 1,
       };
       break;
+    case "DECREMENT":
+      return {
+        ...state,
+        count: state.count - 1,
+      };
 
     default:
       return state;
@@ -27,7 +32,7 @@ const Count = () => {
     <div>
       <h1>{state.count}</h1>
       <button onClick={() => dispatch({ type: "INCREMENT" })}>Increase</button>
-      <button>Decrease</button>
+      <button onClick={() => dispatch({ type: "DECREMENT" })}>Decrease</button>
     </div>
   );
 };
