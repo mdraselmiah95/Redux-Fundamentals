@@ -13,6 +13,11 @@ const Portal = () => {
       <button onClick={() => dispatch({ type: "ADD_PATIENT", name })}>
         Add
       </button>
+      <br />
+      <h3>Added Patients:</h3>
+      {state.patients.map((patient) => (
+        <p key={patient.id}>{patient.name}</p>
+      ))}
     </div>
   );
 };
